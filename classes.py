@@ -37,16 +37,26 @@ class paper(object):
         for i in range(len(section.start_patterns)):
             try:
                 text = section.preprocess_steps[i](text)
-                start = section.start_patterns[i].search(text).start()
-                end = section.end_patterns[i].search(text[start:]).start()+start
+                start_match = section.start_patterns[i].search(text)
+                start = start_match.start()
+                start_groups = ''.join([a for a in start_match.groups() if a])
+                end_match = section.end_patterns[i].search(text[start:])
+                end_groups = ''.join([a for a in end_match.groups() if a])
+                end = end_match.start()+start
                 break
             except:
                 continue
         text = text[start:end]
         setattr(self,attr,text)
-        setattr(self,attr+'_start_match',section.start_patterns[i])
-        setattr(self,attr+'_end_match',section.end_patterns[i])
-        setattr(self,attr+'_used_preprocess_step',section.preprocess_steps[i])
+        setattr(self,
+                attr+'_start_match',
+                'pattern: '+section.start_patterns[i].pattern+'\nmatched: '+start_groups)
+        setattr(self,
+                attr+'_end_match',
+                'pattern: '+section.end_patterns[i].pattern+'\nmatched: '+end_groups)
+        setattr(self,
+                attr+'_used_preprocess_step',
+                section.preprocess_steps[i])
 
 class section(object):
     def __init__(self,name,start_pattern,end_pattern,preprocess_steps=null):
