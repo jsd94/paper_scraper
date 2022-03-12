@@ -27,7 +27,7 @@ class paper(object):
         
         self.pass_qa = is_quality(text)
         if not self.pass_qa:
-            return 'Error reading text'
+            return 'Error: Text extraction failed.'
         else:
             return text
     
@@ -46,7 +46,14 @@ class paper(object):
                 break
             except:
                 continue
-        text = text[start:end]
+        try:       
+            text = text[start:end]
+            setattr(self,attr+'_captured',True)
+        except:
+            text = 'Error: Section could not be captured'
+            setattr(self,attr,text)
+            setattr(self,attr+'_captured',False)
+            return
         setattr(self,attr,text)
         setattr(self,
                 attr+'_start_match',
