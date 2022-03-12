@@ -48,6 +48,12 @@ null
 
 results = section(
     name = 'results',
-    start_pattern = r'',
-    end_pattern = r''
+    start_pattern = r'\n([^A-Za-z]*|[\dI]+.?\s*|[A-Za-z\s]*\s*)(R\s*[Ee]\s*[Ss]\s*[Uu]\s*[Ll]\s*[Tt]\s*[Ss]?)(\b.*\b|\s)(\b.*\b|\s){0,3}\n',
+    end_pattern = r'\n([^A-Za-z]*|[\dI]+.?\s*)(P\s*[Rr]\s*[Oo]\s*[Tt]\s*[Oo]\s*[Cc]\s*[Oo]\s*[Ll]\s*[Ss]?|E\s*[Xx]\s*[Pp]\s*[Ee]\s*[Rr]\s*[Ii]\s*[Mm]\s*[Ee]\s*[Nn]\s*[Tt]\s*[Aa]\s*[Ll]|M\s*[Aa]\s*[Tt]\s*[Ee]\s*[Rr]\s*[Ii]\s*[Aa]\s*[Ll]\s*[Ss]?|M\s*[Ee]\s*[Tt]\s*[Hh]\s*[Oo]\s*[Dd]\s*[Ss]?|M\s*[Ee]\s*[Tt]\s*[Hh]\s*[Oo]\s*[Dd]\s*[Oo]\s*[Ll]\s*[Oo]\s*[Gg]\s*[Yy]|D\s*[Ii]\s*[Ss]\s*[Cc]\s*[Uu]\s*[Ss]\s*[Ss]\s*[Ii]\s*[Oo]\s*[Nn]|C\s*[Oo]\s*[Nn]\s*[Cc]\s*[Ll]\s*[Uu]\s*[Ss]\s*[Ii]\s*[Oo]\s*[Nn]\s*[Ss]?|A\s*[Cc]\s*[Kk]\s*[Nn]\s*[Oo]\s*[Ww]\s*[Ll]\s*[Ee]\s*[Dd]\s*[Gg]\s*[Ee]?\s*[Mm]\s*[Ee]\s*[Nn]\s*[Tt]\s*[Ss]?|R\s*[Ee]\s*[Ff]\s*[Ee]\s*[Rr]\s*[Ee]\s*[Nn]\s*[Cc]\s*[Ee]\s*[Ss]|B\s*[Ii]\s*[Bb]\s*[Ll]\s*[Ii]\s*[Oo]\s*[Gg]\s*[Rr]\s*[Aa]\s*[Pp]\s*[Hh]\s*[Yy]|\b.*\b\s*[Cc]\s*[Ii]\s*[Tt]\s*[Ee]\s*[Dd])(\b.*\b|\s){0,3}\n'
 )
+
+# results.add_layer(
+#     r'',
+#     r'',
+#     null
+# )
