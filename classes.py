@@ -68,8 +68,7 @@ class paper(object):
 class section(object):
     def __init__(self,name,start_pattern,end_pattern,preprocess_steps=null):
         self.start_patterns = [re.compile(start_pattern)]
-        if end_pattern:
-            self.end_patterns = [re.compile(end_pattern)]
+        self.end_patterns = [re.compile(end_pattern)]
         self.name = name
         self.preprocess_steps = [null]
     def __repr__(self):
