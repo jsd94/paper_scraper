@@ -2,3 +2,6 @@
 *.yaml
 *.pyc
 commit_*
+test.csv
+re_reader2.ipynb
+reindexing_dfs.ipynb
