@@ -1,3 +1,5 @@
+from math import log10
+
 def null(arg):
     return arg
 
@@ -13,3 +15,6 @@ def is_quality(text):
             return False
         else:
             return True
+
+def percent_decrease_to_lrv(percent_decrease):
+    return log10(100/(100-percent_decrease))

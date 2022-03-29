@@ -1,6 +1,7 @@
 import re
 import fitz
 from misc import null,is_quality
+import pandas as pd
 
 class paper(object):
     def __init__(self,path_to_pdf):
@@ -64,6 +65,9 @@ class paper(object):
         setattr(self,
                 attr+'_used_preprocess_step',
                 section.preprocess_steps[i])
+        
+    def add_dataset(self,name,columns):
+        setattr(self,name+'_df',pd.DataFrame(columns=columns))
 
 class section(object):
     def __init__(self,name,start_pattern,end_pattern,preprocess_steps=null):
