@@ -1,6 +1,6 @@
 import re
 import fitz
-from misc import null,is_quality
+from paper_scraper.textproc import null,is_quality
 import pandas as pd
 
 class paper(object):

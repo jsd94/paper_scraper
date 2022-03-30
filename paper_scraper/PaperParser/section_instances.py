@@ -1,5 +1,5 @@
-from classes import section
-from misc import null
+from paper_scraper.PaperParser.classes import section
+from paper_scraper.textproc import null
 
 abstract = section(
     name = 'abstract',

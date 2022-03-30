@@ -1,0 +1,8 @@
+setup.py
+paper_scraper/__init__.py
+paper_scraper/regexes.py
+paper_scraper/textproc.py
+paper_scraper.egg-info/PKG-INFO
+paper_scraper.egg-info/SOURCES.txt
+paper_scraper.egg-info/dependency_links.txt
+paper_scraper.egg-info/top_level.txt

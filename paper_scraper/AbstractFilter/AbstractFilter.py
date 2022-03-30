@@ -1,5 +1,5 @@
-from functions import *
-import regexes as reg
+from paper_scraper.AbstractFilter import functions
+from paper_scraper import regexes as reg
 
 
 ### DEFINE CRITERIA
@@ -21,4 +21,4 @@ criteria_dct = {
 }
 
 ### FUNCTION CALL
-filter_abstracts(txtfile='romel.txt',criteria_dct=criteria_dct,outfile='test.xlsx')
+functions.filter_abstracts(txtfile='romel.txt',criteria_dct=criteria_dct,outfile='test.xlsx')

@@ -1,4 +1,4 @@
-import textproc
+from paper_scraper import textproc
 import pandas as pd
 import re
 
